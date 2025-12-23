@@ -1,6 +1,7 @@
-import { Component, inject, Input, WritableSignal } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { TvShow } from '../models/models';
+import { FavoriteService } from '../services/favorite.service';
 
 
 @Component({
@@ -16,4 +17,6 @@ export class TvShowTableComponent {
 
     @Input()
     isLoading = false;
+
+    protected favoritesService = inject(FavoriteService);
 }

@@ -15,4 +15,8 @@ export interface TvShow {
   status: Status;
 }
 
+export type TvShowId = TvShow["id"];
+
+export type TvShowIds = Array<TvShowId>;
+
 export type Status = "Canceled/Ended" | "Ended" | "Running" | "New Series" | "To Be Determined";
