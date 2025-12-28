@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, Signal, signal, WritableSignal } from '@angular/core';
+import { Injectable, Signal, signal } from '@angular/core';
 import { EPISODATE_SEARCH_API } from '../app.constantes';
 import { TvShow, TvShowResponse } from '../models/models';
 

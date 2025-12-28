@@ -21,7 +21,7 @@
       <td data-label="Year started">{{item.start_date | date:'yyyy' }}</td>
       <td data-label="Status">{{item.status}}</td>
       <td data-label="Actions">
-        <span class="icon-info"></span>
+        <span class="icon-info" routerLink="details/{{item.id}}"></span>
         <span class="icon-bookmark" [class.highlight]="favoritesService.favorites().includes(item.id)"
           (click)="favoritesService.toggleFavorites(item.id)"></span>
         <span class="icon-link"></span>

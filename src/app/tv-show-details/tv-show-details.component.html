@@ -1,0 +1,25 @@
+<h2>{{tvShow.name}}  - {{tvShow.country}} - {{tvShow.start_date | date:'yyyy'}} </h2>
+ <hr/>
+ <div>
+
+ </div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img [src]="tvShow.image_thumbnail_path" />
+      </div>
+      <div class="col-sm-6" [innerHTML]="tvShow.description">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h5>Rating: {{tvShow.rating | number: '1.0-2'}}/10 (rated by {{tvShow.rating_count}} people)</h5>
+      <p>
+        {{tvShow.episodes.length}} episodes - {{tvShow.seasonCount | i18nPlural: {'=1': '# season', 'other': '# seasons'} }}
+      </p>
+    </div>
+  </div>
+</div>
+ <button (click)="back()" class="primary"><< Back</button>
